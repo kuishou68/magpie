@@ -1,0 +1,22 @@
+<!doctype html><html lang="zh"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>#433 界面预览 · 4477b77</title>
+<style>:root{color-scheme:light dark;--bg:#f6f6f7;--fg:#1d1d1f;--muted:#6e6e73;--card:#fff;--line:#e5e5ea}
+@media (prefers-color-scheme:dark){:root{--bg:#111113;--fg:#f2f2f4;--muted:#9a9aa0;--card:#1c1c1f;--line:#2c2c30}}
+body{margin:0;background:var(--bg);color:var(--fg);font:15px/1.6 -apple-system,"Segoe UI","PingFang SC","Noto Sans CJK SC",sans-serif}
+main{max-width:1100px;margin:0 auto;padding:28px 16px 60px}h1{font-size:20px;margin:0 0 4px}.m{color:var(--muted);font-size:13px;margin:0 0 20px}
+video,img{display:block;width:100%;border-radius:10px;border:1px solid var(--line);background:var(--card)}figure{margin:0 0 28px}figcaption{color:var(--muted);font-size:13px;margin-top:8px}
+a{color:inherit}</style>
+<main><h1>#433 界面预览</h1><p class="m">commit 4477b77 · <a href="https://github.com/yetone/magpie/pull/433">回到 PR</a> · 「添加供应商」从内联展开、把页面撑高并自动滚动的抽屉，改为浮在列表之上的遮罩浮层：打开／关闭不再改变已添加供应商列表的位置与滚动高度，可用关闭按钮、点击遮罩、Esc 关闭，窄窗口下只有选项区域滚动；浮层控件的焦点会保留／恢复，编辑窗口关闭后焦点回到浮层里的原选项或搜索框；「复制」「再添加一个」改为直接打开编辑窗口，取消后回到原页面而不是留下浮层。</p>
+<figure><video src="preview.mp4" controls autoplay muted playsinline poster="poster.png"></video><figcaption>红线是鼠标走过的轨迹，红色圆环是一次点击；底部文字是这一步在做什么。空格暂停，← → 逐段查看。</figcaption></figure>
+<figure><img src="01-providers-list.png" alt="供应商页：列表与底部的「＋ 添加供应商」"><figcaption>打开／关闭添加浮层，列表不动 · 供应商页：列表与底部的「＋ 添加供应商」</figcaption></figure>
+<figure><img src="02-add-overlay-open.png" alt="点击「＋ 添加供应商」之后的供应商页"><figcaption>打开／关闭添加浮层，列表不动 · 点击「＋ 添加供应商」之后的供应商页</figcaption></figure>
+<figure><img src="03-add-overlay-scrolled.png" alt="在浮层里向下滚动供应商选项"><figcaption>打开／关闭添加浮层，列表不动 · 在浮层里向下滚动供应商选项</figcaption></figure>
+<figure><img src="04-add-overlay-closed.png" alt="关闭浮层之后的供应商页"><figcaption>打开／关闭添加浮层，列表不动 · 关闭浮层之后的供应商页</figcaption></figure>
+<figure><img src="05-add-overlay-escape.png" alt="按 Esc 之后的供应商页"><figcaption>打开／关闭添加浮层，列表不动 · 按 Esc 之后的供应商页</figcaption></figure>
+<figure><img src="06-sheet-bottom-options.png" alt="浮层底部的供应商选项"><figcaption>从浮层进入编辑窗口再返回 · 浮层底部的供应商选项</figcaption></figure>
+<figure><img src="07-editor-from-sheet.png" alt="从浮层选项打开的编辑窗口"><figcaption>从浮层进入编辑窗口再返回 · 从浮层选项打开的编辑窗口</figcaption></figure>
+<figure><img src="08-sheet-after-editor.png" alt="关闭编辑窗口之后的浮层"><figcaption>从浮层进入编辑窗口再返回 · 关闭编辑窗口之后的浮层</figcaption></figure>
+<figure><img src="09-provider-editor.png" alt="供应商行打开的编辑窗口"><figcaption>「复制」直接打开编辑窗口 · 供应商行打开的编辑窗口</figcaption></figure>
+<figure><img src="10-duplicate-editor.png" alt="点「复制」之后的编辑窗口"><figcaption>「复制」直接打开编辑窗口 · 点「复制」之后的编辑窗口</figcaption></figure>
+<figure><img src="11-after-cancel-duplicate.png" alt="取消编辑之后的供应商页"><figcaption>「复制」直接打开编辑窗口 · 取消编辑之后的供应商页</figcaption></figure>
+</main></html>

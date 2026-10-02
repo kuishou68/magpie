@@ -1,0 +1,56 @@
+{
+  "summary": "diff 给 magpie web 增加了一整套只在手机宽度（≤760px，或触屏且≤1024px）生效的响应式规则：顶栏与导航换行横滑、Agent 行的模型整行/effort 与额外按钮换行、用量统计卡与图表日期自适应、资源库头部、设置行、路由组与各表单控件放大换行，并让选择器弹出层尺寸不超过视口、触屏打开选择器时不再自动聚焦过滤框；同时把判定“手机”的断点从 600px 放宽到 760px（触屏 1024px）。",
+  "scenes": [
+    {
+      "title": "Agent 行与字段选择器",
+      "shots": [
+        {
+          "file": "01-agents-list.png",
+          "caption": "Agent 标签页的默认列表（1280×800）",
+          "width": 2560
+        },
+        {
+          "file": "02-agents-unrolled.png",
+          "caption": "展开后的 Agent 列表",
+          "width": 2560
+        },
+        {
+          "file": "03-agent-row-codex.png",
+          "caption": "展开后 Codex 一行的模型、推理强度与额外按钮",
+          "width": 2560
+        },
+        {
+          "file": "04-agent-row-claude-code.png",
+          "caption": "展开后 Claude Code 一行的模型与推理强度字段",
+          "width": 2560
+        }
+      ]
+    },
+    {
+      "title": "用量页的合计与图表",
+      "shots": [
+        {
+          "file": "05-usage-top.png",
+          "caption": "用量页顶部的统计与图表",
+          "width": 2560
+        },
+        {
+          "file": "06-usage-rows.png",
+          "caption": "向下滚动后的用量页下部",
+          "width": 2560
+        }
+      ]
+    }
+  ],
+  "video": "preview.mp4",
+  "poster": "poster.png",
+  "errors": [
+    "Agent 行与字段选择器 · click #agents .row.agent .field[data-key=\"provider\"]: won't press \"magpie provider：magpie · Desktop's third\""
+  ],
+  "leak": false,
+  "skipped": null,
+  "mismatch": "",
+  "unseen": "沙盒预览固定在 1280×800 的桌面浏览器（指针为精细），diff 里的响应式规则全部包在 max-width:760px 或 (pointer:coarse) and (max-width:1024px) 的媒体查询里，因此录屏里看不到任何布局变化：导航换行与横向滚动、Agent 字段整行与换行、用量统计卡两列/stat 行网格/图表日期隐藏、资源库头部换行、设置行与编辑器换行、路由组标签在 web 上保留等都无法呈现。placePop 的视口钳制、打开选择器不自动聚焦也只在本沙盒不相干的窄屏或触屏下才可能看出。另外沙盒只有 DeepSeek 余额（无订阅额度窗口），也没有路由组，相关的额度窗口与 .rt-group 标签行无从出现。",
+  "interactive": true,
+  "pages": 3
+}

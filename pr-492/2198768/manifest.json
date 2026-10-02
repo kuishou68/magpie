@@ -1,0 +1,46 @@
+{
+  "summary": "把网关「最近调用」状态行里的耗时与 TTFT、供应商端点测试结果、模型芯片的悬浮提示、以及单独测试某个模型的状态提示，从写死的毫秒改成与路由/用量一致的 ledTook 自适应时长（不足 1 秒显示 ms，超过 1 秒显示秒），中英文案里的 {ms} ms 相应换成 {took}。",
+  "scenes": [
+    {
+      "title": "网关最近调用的时长",
+      "shots": [
+        {
+          "file": "01-gateway-recent-calls.png",
+          "caption": "网关「最近调用」列表里每次调用的状态行",
+          "width": 2560
+        },
+        {
+          "file": "02-gateway-call-over-1s.png",
+          "caption": "第三条调用（耗时超过 1 秒）的状态行",
+          "width": 2556
+        }
+      ]
+    },
+    {
+      "title": "供应商端点测试的耗时",
+      "shots": [
+        {
+          "file": "03-deepseek-editor.png",
+          "caption": "DeepSeek 设置里的端点与测试一栏",
+          "width": 2560
+        },
+        {
+          "file": "05-endpoint-test-took.png",
+          "caption": "端点测试结果里显示的耗时",
+          "width": 1120
+        }
+      ]
+    }
+  ],
+  "video": "preview.mp4",
+  "poster": "poster.png",
+  "errors": [
+    "供应商端点测试的耗时 · shot .res: nothing visible matches .res (3 in the page)"
+  ],
+  "leak": false,
+  "skipped": null,
+  "mismatch": "",
+  "unseen": "模型芯片上「…内响应」的提示是元素的 title（浏览器原生 tooltip），且只在测试过该模型后才出现，截图里拍不到；右键「测试此模型」的结果落在底部状态条上，需要右键菜单触发，本次操作不含右键。网关状态行里的 TTFT 只在流式调用上出现，沙盒里的 curl 请求只有耗时、没有 TTFT，因此 TTFT 那一段显示不出来。",
+  "interactive": true,
+  "pages": 2
+}

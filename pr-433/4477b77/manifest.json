@@ -1,0 +1,84 @@
+{
+  "summary": "「添加供应商」从内联展开、把页面撑高并自动滚动的抽屉，改为浮在列表之上的遮罩浮层：打开／关闭不再改变已添加供应商列表的位置与滚动高度，可用关闭按钮、点击遮罩、Esc 关闭，窄窗口下只有选项区域滚动；浮层控件的焦点会保留／恢复，编辑窗口关闭后焦点回到浮层里的原选项或搜索框；「复制」「再添加一个」改为直接打开编辑窗口，取消后回到原页面而不是留下浮层。",
+  "scenes": [
+    {
+      "title": "打开／关闭添加浮层，列表不动",
+      "shots": [
+        {
+          "file": "01-providers-list.png",
+          "caption": "供应商页：列表与底部的「＋ 添加供应商」",
+          "width": 2560
+        },
+        {
+          "file": "02-add-overlay-open.png",
+          "caption": "点击「＋ 添加供应商」之后的供应商页",
+          "width": 2560
+        },
+        {
+          "file": "03-add-overlay-scrolled.png",
+          "caption": "在浮层里向下滚动供应商选项",
+          "width": 2560
+        },
+        {
+          "file": "04-add-overlay-closed.png",
+          "caption": "关闭浮层之后的供应商页",
+          "width": 2560
+        },
+        {
+          "file": "05-add-overlay-escape.png",
+          "caption": "按 Esc 之后的供应商页",
+          "width": 2560
+        }
+      ]
+    },
+    {
+      "title": "从浮层进入编辑窗口再返回",
+      "shots": [
+        {
+          "file": "06-sheet-bottom-options.png",
+          "caption": "浮层底部的供应商选项",
+          "width": 2560
+        },
+        {
+          "file": "07-editor-from-sheet.png",
+          "caption": "从浮层选项打开的编辑窗口",
+          "width": 2560
+        },
+        {
+          "file": "08-sheet-after-editor.png",
+          "caption": "关闭编辑窗口之后的浮层",
+          "width": 2560
+        }
+      ]
+    },
+    {
+      "title": "「复制」直接打开编辑窗口",
+      "shots": [
+        {
+          "file": "09-provider-editor.png",
+          "caption": "供应商行打开的编辑窗口",
+          "width": 2560
+        },
+        {
+          "file": "10-duplicate-editor.png",
+          "caption": "点「复制」之后的编辑窗口",
+          "width": 2560
+        },
+        {
+          "file": "11-after-cancel-duplicate.png",
+          "caption": "取消编辑之后的供应商页",
+          "width": 2560
+        }
+      ]
+    }
+  ],
+  "video": "preview.mp4",
+  "poster": "poster.png",
+  "errors": [],
+  "leak": false,
+  "skipped": null,
+  "mismatch": "",
+  "unseen": "窄窗口（浮层内选项独立滚动、关闭后无空白）在固定 1280×800 的录制视口里无法呈现；沙盒只有一个 DeepSeek 供应商，列表很短，「长列表位置与滚动高度不变」在长列表上的效果看不出来；点击遮罩空白处关闭这条路径需要指定点击坐标，录制步骤里只用关闭按钮和 Esc 演示关闭。",
+  "interactive": true,
+  "pages": 1
+}

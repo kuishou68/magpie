@@ -1,0 +1,54 @@
+{
+  "summary": "用量页概览的图表新增「每小时（60 根柱）/ 每 10 分钟（120 根柱）」滚动时间轴，并在图表上方显示时间范围与时间点标注，同时新增设置项「用量图表时间粒度」；此外模型行的 tok/s 从副标题移到了 token 数旁边。",
+  "scenes": [
+    {
+      "title": "设置里的「用量图表时间粒度」",
+      "shots": [
+        {
+          "file": "01-settings-open.png",
+          "caption": "设置打开后的页面",
+          "width": 2560
+        },
+        {
+          "file": "02-settings-allowances.png",
+          "caption": "「额度」标签页里的偏好设置",
+          "width": 2560
+        },
+        {
+          "file": "03-settings-hourly-selected.png",
+          "caption": "选中「每小时」后的设置行",
+          "width": 2560
+        }
+      ]
+    },
+    {
+      "title": "概览图表：每小时与每 10 分钟",
+      "shots": [
+        {
+          "file": "04-usage-hourly-chart.png",
+          "caption": "「每小时」下的用量概览图表，以及图表上方的时间范围与时间标注",
+          "width": 2560
+        },
+        {
+          "file": "05-usage-models-rows.png",
+          "caption": "概览下方模型行的 token 数与 tok/s 所在位置",
+          "width": 2560
+        },
+        {
+          "file": "06-usage-10m-chart.png",
+          "caption": "「每 10 分钟」下的用量概览图表：柱宽、柱间距与时间标注",
+          "width": 2560
+        }
+      ]
+    }
+  ],
+  "video": "preview.mp4",
+  "poster": "poster.png",
+  "errors": [],
+  "leak": false,
+  "skipped": null,
+  "mismatch": "描述说设置项位于「设置 → 额度」(Allowances)，但同一个 PR 的 README 写的是「设置 → 常规/Preferences」，浏览器测试也是打开设置后直接点该选项、没有切换标签页；实际在哪个标签下以截图为准，diff 本身没有改「额度」页的结构。描述里“bar widths fit the window”“rejected requests are left out”等属于行为而非新控件，diff 里也没有新增的开关或按钮。",
+  "unseen": "沙盒只有 DeepSeek、真实调用就在刚刚发生，所以「每小时 / 每 10 分钟」的滚动图里只有最右侧一两根柱有数据，看不到整段时间分布；「今天为空但昨天仍留在滚动图里」「被拒绝的请求不计入滚动图」这两种情形需要构造数据才看得到。本次真实调用不是流式（没有 decode_ms），所以模型行上紧跟 token 数的 tok/s 可能不出现。也没有任何订阅账号，额度区只有余额，与本次改动无关。",
+  "interactive": true,
+  "pages": 4
+}

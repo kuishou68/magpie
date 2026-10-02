@@ -1,0 +1,17 @@
+<!doctype html><html lang="zh"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>#495 界面预览 · d840714</title>
+<style>:root{color-scheme:light dark;--bg:#f6f6f7;--fg:#1d1d1f;--muted:#6e6e73;--card:#fff;--line:#e5e5ea}
+@media (prefers-color-scheme:dark){:root{--bg:#111113;--fg:#f2f2f4;--muted:#9a9aa0;--card:#1c1c1f;--line:#2c2c30}}
+body{margin:0;background:var(--bg);color:var(--fg);font:15px/1.6 -apple-system,"Segoe UI","PingFang SC","Noto Sans CJK SC",sans-serif}
+main{max-width:1100px;margin:0 auto;padding:28px 16px 60px}h1{font-size:20px;margin:0 0 4px}.m{color:var(--muted);font-size:13px;margin:0 0 20px}
+video,img{display:block;width:100%;border-radius:10px;border:1px solid var(--line);background:var(--card)}figure{margin:0 0 28px}figcaption{color:var(--muted);font-size:13px;margin-top:8px}
+a{color:inherit}</style>
+<main><h1>#495 界面预览</h1><p class="m">commit d840714 · <a href="https://github.com/yetone/magpie/pull/495">回到 PR</a> · 用量页概览的图表新增「每小时（60 根柱）/ 每 10 分钟（120 根柱）」滚动时间轴，并在图表上方显示时间范围与时间点标注，同时新增设置项「用量图表时间粒度」；此外模型行的 tok/s 从副标题移到了 token 数旁边。</p>
+<figure><video src="preview.mp4" controls autoplay muted playsinline poster="poster.png"></video><figcaption>红线是鼠标走过的轨迹，红色圆环是一次点击；底部文字是这一步在做什么。空格暂停，← → 逐段查看。</figcaption></figure>
+<figure><img src="01-settings-open.png" alt="设置打开后的页面"><figcaption>设置里的「用量图表时间粒度」 · 设置打开后的页面</figcaption></figure>
+<figure><img src="02-settings-allowances.png" alt="「额度」标签页里的偏好设置"><figcaption>设置里的「用量图表时间粒度」 · 「额度」标签页里的偏好设置</figcaption></figure>
+<figure><img src="03-settings-hourly-selected.png" alt="选中「每小时」后的设置行"><figcaption>设置里的「用量图表时间粒度」 · 选中「每小时」后的设置行</figcaption></figure>
+<figure><img src="04-usage-hourly-chart.png" alt="「每小时」下的用量概览图表，以及图表上方的时间范围与时间标注"><figcaption>概览图表：每小时与每 10 分钟 · 「每小时」下的用量概览图表，以及图表上方的时间范围与时间标注</figcaption></figure>
+<figure><img src="05-usage-models-rows.png" alt="概览下方模型行的 token 数与 tok/s 所在位置"><figcaption>概览图表：每小时与每 10 分钟 · 概览下方模型行的 token 数与 tok/s 所在位置</figcaption></figure>
+<figure><img src="06-usage-10m-chart.png" alt="「每 10 分钟」下的用量概览图表：柱宽、柱间距与时间标注"><figcaption>概览图表：每小时与每 10 分钟 · 「每 10 分钟」下的用量概览图表：柱宽、柱间距与时间标注</figcaption></figure>
+</main></html>

@@ -1,0 +1,15 @@
+<!doctype html><html lang="zh"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>#492 界面预览 · 2198768</title>
+<style>:root{color-scheme:light dark;--bg:#f6f6f7;--fg:#1d1d1f;--muted:#6e6e73;--card:#fff;--line:#e5e5ea}
+@media (prefers-color-scheme:dark){:root{--bg:#111113;--fg:#f2f2f4;--muted:#9a9aa0;--card:#1c1c1f;--line:#2c2c30}}
+body{margin:0;background:var(--bg);color:var(--fg);font:15px/1.6 -apple-system,"Segoe UI","PingFang SC","Noto Sans CJK SC",sans-serif}
+main{max-width:1100px;margin:0 auto;padding:28px 16px 60px}h1{font-size:20px;margin:0 0 4px}.m{color:var(--muted);font-size:13px;margin:0 0 20px}
+video,img{display:block;width:100%;border-radius:10px;border:1px solid var(--line);background:var(--card)}figure{margin:0 0 28px}figcaption{color:var(--muted);font-size:13px;margin-top:8px}
+a{color:inherit}</style>
+<main><h1>#492 界面预览</h1><p class="m">commit 2198768 · <a href="https://github.com/yetone/magpie/pull/492">回到 PR</a> · 把网关「最近调用」状态行里的耗时与 TTFT、供应商端点测试结果、模型芯片的悬浮提示、以及单独测试某个模型的状态提示，从写死的毫秒改成与路由/用量一致的 ledTook 自适应时长（不足 1 秒显示 ms，超过 1 秒显示秒），中英文案里的 {ms} ms 相应换成 {took}。</p>
+<figure><video src="preview.mp4" controls autoplay muted playsinline poster="poster.png"></video><figcaption>红线是鼠标走过的轨迹，红色圆环是一次点击；底部文字是这一步在做什么。空格暂停，← → 逐段查看。</figcaption></figure>
+<figure><img src="01-gateway-recent-calls.png" alt="网关「最近调用」列表里每次调用的状态行"><figcaption>网关最近调用的时长 · 网关「最近调用」列表里每次调用的状态行</figcaption></figure>
+<figure><img src="02-gateway-call-over-1s.png" alt="第三条调用（耗时超过 1 秒）的状态行"><figcaption>网关最近调用的时长 · 第三条调用（耗时超过 1 秒）的状态行</figcaption></figure>
+<figure><img src="03-deepseek-editor.png" alt="DeepSeek 设置里的端点与测试一栏"><figcaption>供应商端点测试的耗时 · DeepSeek 设置里的端点与测试一栏</figcaption></figure>
+<figure><img src="05-endpoint-test-took.png" alt="端点测试结果里显示的耗时"><figcaption>供应商端点测试的耗时 · 端点测试结果里显示的耗时</figcaption></figure>
+</main></html>

@@ -1,0 +1,49 @@
+{
+  "summary": "这个 PR 只改界面文案，不动结构：把设置「额度」页里与订阅额度相关的英文从 Usage 改成 Allowances（Allowances in the menu bar、Allowance display、Allowance alert 及其说明、菜单栏刷新说明），并统一账号额度的中英文用词（Allowance unavailable、No allowance reported、Hide/Show allowances、Step Plan allowances、Allowance 中文改为「额度」、余额旁「截至…」与「账户里除周期额度外…」两处中文改写）。",
+  "scenes": [
+    {
+      "title": "设置「额度」页的中英文文案",
+      "shots": [
+        {
+          "file": "01-settings-allowances-zh.png",
+          "caption": "设置 → 额度（中文）：菜单栏、显示、刷新、提醒几行",
+          "width": 2560
+        },
+        {
+          "file": "02-settings-allowances-en.png",
+          "caption": "设置 → 额度（English）：同样几行的英文用词",
+          "width": 2560
+        }
+      ]
+    },
+    {
+      "title": "用量页额度区块",
+      "shots": [
+        {
+          "file": "03-usage-allowance-card.png",
+          "caption": "用量页额度区块里的 DeepSeek 账户卡片",
+          "width": 2560
+        }
+      ]
+    },
+    {
+      "title": "供应商设置里的额度文案",
+      "shots": [
+        {
+          "file": "04-provider-deepseek-editor.png",
+          "caption": "DeepSeek 设置页里额度与余额相关的说明文字",
+          "width": 2560
+        }
+      ]
+    }
+  ],
+  "video": "preview.mp4",
+  "poster": "poster.png",
+  "errors": [],
+  "leak": false,
+  "skipped": null,
+  "mismatch": "",
+  "unseen": "改动里有不少条目需要本沙盒没有的数据才会出现：订阅类账号的百分比窗口及其「展开额度 / 收起额度」按钮、窗口名 Allowance、无额度数据的空状态「暂无额度数据」、额度读取失败时的「暂时无法获取额度」和「截至 {when}，暂时无法获取最新额度」、StepFun 的「Step Plan 额度」。这里只有 DeepSeek 一个供应商，只报余额、且每次都能正常读到，所以这些文案只会出现在用量页额度区块和供应商设置页的对应位置，画面上仍是原来的余额与刷新时间。",
+  "interactive": true,
+  "pages": 3
+}

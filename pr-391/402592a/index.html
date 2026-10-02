@@ -1,0 +1,17 @@
+<!doctype html><html lang="zh"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>#391 界面预览 · 402592a</title>
+<style>:root{color-scheme:light dark;--bg:#f6f6f7;--fg:#1d1d1f;--muted:#6e6e73;--card:#fff;--line:#e5e5ea}
+@media (prefers-color-scheme:dark){:root{--bg:#111113;--fg:#f2f2f4;--muted:#9a9aa0;--card:#1c1c1f;--line:#2c2c30}}
+body{margin:0;background:var(--bg);color:var(--fg);font:15px/1.6 -apple-system,"Segoe UI","PingFang SC","Noto Sans CJK SC",sans-serif}
+main{max-width:1100px;margin:0 auto;padding:28px 16px 60px}h1{font-size:20px;margin:0 0 4px}.m{color:var(--muted);font-size:13px;margin:0 0 20px}
+video,img{display:block;width:100%;border-radius:10px;border:1px solid var(--line);background:var(--card)}figure{margin:0 0 28px}figcaption{color:var(--muted);font-size:13px;margin-top:8px}
+a{color:inherit}</style>
+<main><h1>#391 界面预览</h1><p class="m">commit 402592a · <a href="https://github.com/yetone/magpie/pull/391">回到 PR</a> · diff 给 magpie web 增加了一整套只在手机宽度（≤760px，或触屏且≤1024px）生效的响应式规则：顶栏与导航换行横滑、Agent 行的模型整行/effort 与额外按钮换行、用量统计卡与图表日期自适应、资源库头部、设置行、路由组与各表单控件放大换行，并让选择器弹出层尺寸不超过视口、触屏打开选择器时不再自动聚焦过滤框；同时把判定“手机”的断点从 600px 放宽到 760px（触屏 1024px）。</p>
+<figure><video src="preview.mp4" controls autoplay muted playsinline poster="poster.png"></video><figcaption>红线是鼠标走过的轨迹，红色圆环是一次点击；底部文字是这一步在做什么。空格暂停，← → 逐段查看。</figcaption></figure>
+<figure><img src="01-agents-list.png" alt="Agent 标签页的默认列表（1280×800）"><figcaption>Agent 行与字段选择器 · Agent 标签页的默认列表（1280×800）</figcaption></figure>
+<figure><img src="02-agents-unrolled.png" alt="展开后的 Agent 列表"><figcaption>Agent 行与字段选择器 · 展开后的 Agent 列表</figcaption></figure>
+<figure><img src="03-agent-row-codex.png" alt="展开后 Codex 一行的模型、推理强度与额外按钮"><figcaption>Agent 行与字段选择器 · 展开后 Codex 一行的模型、推理强度与额外按钮</figcaption></figure>
+<figure><img src="04-agent-row-claude-code.png" alt="展开后 Claude Code 一行的模型与推理强度字段"><figcaption>Agent 行与字段选择器 · 展开后 Claude Code 一行的模型与推理强度字段</figcaption></figure>
+<figure><img src="05-usage-top.png" alt="用量页顶部的统计与图表"><figcaption>用量页的合计与图表 · 用量页顶部的统计与图表</figcaption></figure>
+<figure><img src="06-usage-rows.png" alt="向下滚动后的用量页下部"><figcaption>用量页的合计与图表 · 向下滚动后的用量页下部</figcaption></figure>
+</main></html>
